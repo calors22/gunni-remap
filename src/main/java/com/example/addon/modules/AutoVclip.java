@@ -12,15 +12,13 @@ public class AutoVclip extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
     private final Setting<Integer> healthLevel = sgGeneral.add(new IntSetting.Builder()
-        .name("health-level")
-        .description("Health level at which to trigger vclip.")
+        .name("health-level").description("Health level at which to trigger vclip.")
         .defaultValue(10)
         .min(1)
         .sliderRange(1, 20)
         .build());
     private final Setting<Integer> clipDistance = sgGeneral.add(new IntSetting.Builder()
-        .name("clip-distance")
-        .description("Distance to vclip.")
+        .name("clip-distance").description("Distance to vclip.")
         .defaultValue(100)
         .min(1)
         .sliderRange(1, 500)
